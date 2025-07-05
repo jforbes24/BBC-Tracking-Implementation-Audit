@@ -5,7 +5,7 @@
 import pandas as pd
 
 # Load the CSV from Screaming Frog
-df = pd.read_csv('iplayer_extractions.csv')
+df = pd.read_csv('/Users/forbej02/Documents/Screaming Frog/web_iplayer_screamingFrog_extraction.csv')
 
 # Identify columns for each extraction type
 metadata_cols = [col for col in df.columns if 'data-bbc-metadata' in col]
@@ -47,6 +47,6 @@ for _, row in df.iterrows():
 
 # Convert to DataFrame and save to CSV
 output_df = pd.DataFrame(output)
-output_df.to_csv('iplayer_extractions_limited.csv', index=False)
+output_df.to_csv('web_iplayer_screamingFrog_limited.csv', index=False)
 
-print("Processed data saved to 'iplayer_extractions_limited.csv'")
+print("Processed data saved to 'web_iplayer_screamingFrog_limited.csv'")
